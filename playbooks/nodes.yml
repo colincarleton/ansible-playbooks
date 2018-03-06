@@ -1,0 +1,14 @@
+---
+- name: Puppet-Agents Configuration
+  hosts: 
+    - node1
+    - node2
+    - node3
+  become_method: sudo
+  become: true
+  roles:
+    - ntp
+    - git
+    - bash-it
+    - epel-release
+    - puppet-agent

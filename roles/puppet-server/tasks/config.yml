@@ -1,0 +1,5 @@
+---
+- name: Init Settings for puppetserver
+  template:
+    src: puppetserver.j2
+    dest: /etc/sysconfig/puppetserver

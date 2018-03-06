@@ -1,0 +1,11 @@
+---
+- name: Jenkins Server
+  hosts: kibana
+  become_method: sudo
+  become: true
+  roles:
+    - ntp
+    - git
+    - bash-it
+    - java
+    - kibana

@@ -1,0 +1,7 @@
+---
+- name: Install Modules
+  shell: /opt/puppetlabs/bin/puppet module install {{ item.module.name }} --version {{ item.module.version }} --modulepath /etc/puppetlabs/code/modules/
+  args:
+    executable: /bin/bash
+  with_items:
+    - "{{ puppet_modules }}"

@@ -1,0 +1,11 @@
+---
+- name: Puppet-Server Configuration
+  hosts: puppet
+  become_method: sudo
+  become: true
+  roles:
+    - ntp
+    - git
+    - bash-it
+    - epel-release
+    - puppet-server

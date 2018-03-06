@@ -1,0 +1,5 @@
+[puppet]
+puppet-test
+
+[nodes]
+node[1:3]

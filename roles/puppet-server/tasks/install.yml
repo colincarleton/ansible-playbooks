@@ -1,0 +1,37 @@
+---
+#- name: Enable Puppet Repo (1/2)
+#  yum_repository:
+#    name: puppet5
+#    description: Puppet 5 Repository el 7 - $basearch
+#    file: puppet5.repo
+#    baseurl: http://yum.puppetlabs.com/puppet5/el/7/$basearch
+#    gpgcheck: yes
+#
+#- name: Enable Puppet Repo (2/2)
+#  yum_repository:
+#    name: puppet5-source
+#    description: Puppet 5 Repository el 7 - source
+#    file: puppet5.repo
+#    baseurl: http://yum.puppetlabs.com/puppet5-nightly/el/7/SRPMS 
+#    gpgcheck: yes
+#    failovermethod: priority
+#    enabled: no
+#
+#- name: Puppet GPG Key
+#  rpm_key:
+#    state: present
+#    key: https://yum.puppetlabs.com/RPM-GPG-KEY-puppetlabs
+
+- name: Enable Puppet Repo
+  yum:
+    name: https://yum.puppetlabs.com/puppet5/puppet5-release-el-7.noarch.rpm
+    state: present
+
+#- name: Enable Puppet Repo
+#  command: rpm -Uvh https://yum.puppetlabs.com/puppet5/puppet5-release-el-7.noarch.rpm
+#  ignore_errors: yes
+
+- name: Install Puppet
+  yum:
+    name: puppetserver
+    state: latest

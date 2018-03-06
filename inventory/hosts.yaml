@@ -1,0 +1,9 @@
+puppet:
+  hosts:
+    puppet-test
+
+nodes:
+  hosts:
+    node1
+    node2
+    node3

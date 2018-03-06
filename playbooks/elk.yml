@@ -1,0 +1,13 @@
+---
+- name: Jenkins Server
+  hosts: elk
+  become_method: sudo
+  become: true
+  roles:
+    - ntp
+    - git
+    - bash-it
+    - java
+    - elastic
+    - logstash
+    - kibana
