@@ -1,6 +1,6 @@
 ---
 - name: Puppet-Agents Configuration
-  hosts: 
+  hosts:
     - node1
     - node2
     - node3
@@ -8,7 +8,6 @@
   become: true
   roles:
     - ntp
-    - git
-    - bash-it
-    - epel-release
-    - puppet-agent
+#    - git
+#    - bash-it
+#    - epel-release
