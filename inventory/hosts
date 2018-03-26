@@ -1,0 +1,6 @@
+[docker]
+node[1:3]
+registry
+
+[ece]
+node[1:3]

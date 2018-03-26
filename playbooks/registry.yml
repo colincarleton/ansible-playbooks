@@ -1,6 +1,6 @@
 ---
 - name: ECE Node Configuration
-  hosts: ece
+  hosts: registry
   become_method: sudo
   become: true
   roles:
