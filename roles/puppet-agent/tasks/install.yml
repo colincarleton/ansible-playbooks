@@ -1,9 +1,0 @@
----
-- name: Enable Puppet Repo
-  command: rpm -Uvh https://yum.puppetlabs.com/puppet5/puppet5-release-el-7.noarch.rpm
-  ignore_errors: yes
-
-- name: Install Puppet
-  yum:
-    name: puppet-agent
-    state: latest

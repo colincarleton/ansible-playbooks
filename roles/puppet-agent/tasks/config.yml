@@ -1,9 +1,0 @@
----
-- name: Place puppet.conf
-  template:
-    src: puppet.conf.j2
-    dest: /etc/puppetlabs/puppet/puppet.conf
-  notify: Start Puppet-Agent
-
-- name: Generate Puppet SSL Key
-  command: "puppet agent -t"

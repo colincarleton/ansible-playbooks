@@ -1,6 +1,0 @@
----
-- name: Install Puppet-Agent
-  include_tasks: install.yml
-
-- name: Configure Puppet-Agent
-  include_tasks: config.yml

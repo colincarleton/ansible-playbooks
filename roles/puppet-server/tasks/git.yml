@@ -1,7 +1,0 @@
----
-- git:
-    repo: "{{ item.repo.git }}"
-    dest: /etc/puppetlabs/code/environments/{{ item.repo.dest }}
-    clone: yes
-  with_items:
-    - "{{ puppet_repo }}"

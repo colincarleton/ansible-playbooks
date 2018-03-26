@@ -1,7 +1,0 @@
----
-- name: Start Puppet-Server
-  systemd:
-    name: puppetserver
-    daemon_reload: yes
-    state: started
-    enabled: yes
