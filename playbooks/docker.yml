@@ -1,8 +1,8 @@
 ---
 - name: ECE Node Configuration
-  hosts: registry
+  hosts: ece
   become_method: sudo
   become: true
   roles:
     - ntp
-    - ansible-role-docker
+    - ansible-role-docker-registry

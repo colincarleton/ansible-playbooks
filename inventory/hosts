@@ -1,6 +1,9 @@
-[docker]
-node[1:3]
-registry
+[docker-registry]
+docker
 
-[ece]
+[docker-nodes]
 node[1:3]
+
+[ece:children]
+docker-nodes
+docker-registry
